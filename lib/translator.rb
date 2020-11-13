@@ -34,7 +34,7 @@ def get_english_meaning(path, emoticon)
   emoticon_hash = load_library(path)
   
   emoticon_hash.each do |english_word, emoticon_set| 
-    if emoticon_hash[:japanese] == [emoticon_set.last]
+    if emoticon_hash[english_word][:japanese] == [emoticon_set.last]
       return english_word
     end
   end
